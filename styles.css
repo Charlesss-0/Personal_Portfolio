@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Rubik&display=swap');
+
+/* BASE RESET START */
+:root {
+    --background-color: #011F26;
+    --main-color: #000;
+    --main-color2: #555;
+    --main-color2-0: #5554;
+    --main-color3: #aaa;
+    --main-color3-0: #aaa4;
+    --main-color4: #2A2F4F;
+    --main-color5: #f7f4ef;
+    --font-color: #bbb;
+    --font-color2: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 980px) {
+    html {
+        font-size: 58%;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+/* BASE RESET END */
+
+/* BASE STYLES */
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.8em;
+    background: var(--background-color);
+    color: var(--font-color);
+}
+
+/* NAVBAR SECTION START */
+#navbar {
+    width: 100%;
+    background-color: var(--main-color4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0 10px 5px var(--main-color4);
+    z-index: 1;
+}
+
+.nav-list {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-list li {
+    width: 9em;
+    height: 4em;
+    display: flex;
+}
+
+.nav-list a {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: var(--font-color);
+    font-family: 'Rubik', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    transition: all 0.5s ease-in-out;
+    padding: 1em;
+    text-shadow: 1px 1px 0 var(--main-color2);
+}
+
+.nav-list a:hover {
+    color: #2A2F4F;
+    background-color: var(--font-color);
+}
+/* NAVBAR SECTION END */
+
+/* WELCOME SECTION START */
+.welcome-section {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(
+        45deg,
+        #C8B6E2,
+        #A8A4CE 20%,
+        #7A86B6,
+        #495C83
+    );
+    display: grid;
+    place-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px 10px #aaa3;
+}
+
+.welcome-section h1 {
+    font: 1000 10rem Montserrat, sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1508020963102-c6c723be5764?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: drop-shadow(2px 2px 0 var(--main-color));
+}
+
+.welcome-section p {
+    font: 900 5rem Rubik, sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1508020963102-c6c723be5764?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: drop-shadow(2px 2px 0 var(--main-color));
+}
+/* WELCOME SECTION END */
+
+/* PROJECTS SECTION START */
+.projects-section {
+    text-align: center;
+}
+
+.projects-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 3em;
+    padding: 5rem;
+}
+
+.line {
+    width: 70%;
+    border-bottom: 3px solid var(--font-color);
+    margin: 2em auto; 
+    border-radius: 100em;
+}
+
+.projects-header {
+    margin: 1em;
+    font: 900 4rem Montserrat, sans-serif;
+    color: var(--font-color);
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0 var(--main-color);
+}
+
+.project-tile {
+    display: grid;
+    place-content: center;
+    text-align: center;
+    overflow: hidden;
+    background-color: var(--main-color3);
+    text-decoration: none;
+    border-radius: 1.5em;
+    border: solid var(--main-color3);
+    transition: all 0.2s linear;
+}
+
+.project-tile:hover {
+    transform: translate(10px, -10px);
+    box-shadow: -10px 10px 0 var(--main-color);
+}
+
+.project-img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+}
+
+.project-title {
+    font: 900 2.5rem Montserrat, sans-serif;
+    color: var(--background-color);
+    text-shadow: 1px 1px 0 var(--main-color);
+    margin: 1em auto;
+}
+
+.button-section {
+    width: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.button {
+    text-decoration: none;
+    font-size: 2rem;
+    width: 10em;
+    height: 2em;
+    font: 900 3rem Nunito, sans-serif;
+    padding-top: 0.6rem;
+    padding-right: 5rem;
+    margin: 1em;
+    text-align: center;
+    background-color: transparent;
+    color: var(--font-color);
+    text-shadow: 1px 1px 0px var(--main-color);
+    transition: all 0.3s ease-in-out;
+    border-radius: 1rem;
+    border: solid var(--main-color3);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--main-color2);
+}
+
+.button i {
+    margin-left: 1.5re;
+    font-size: 2.5rem !important;
+    position: relative;
+    top: -2em;
+    left: -0.87em;
+    width: 12em;
+    height: 2.4em;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: end;
+    padding: 1.8rem 2rem 0 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.button i:hover {
+    transform: translateX(5px);
+}
+/* PROJECTS SECTION END */
+
+/* ABOUT ME SECTION START */
+.contact-section {
+    width: 80%;
+    text-align: center;
+    background-color: #f7f4ef44;
+    margin: auto;
+    margin-top: 3em;
+    padding: 2em;
+    border-radius: 2em;
+}
+
+.contact-section h2 {
+    font: 700 4rem Montserrat, sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.contact-section p {
+    font-size: 3rem;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    text-shadow: 1px 1px 0 #000;
+}
+
+.contact-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 180px));
+    place-content: center;
+    grid-gap: 5em;
+}
+
+.profile-link {
+    font-size: 7rem;
+    text-decoration: none;
+    color: var(--font-color);
+    padding: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.icon-name {
+    font: 500 3rem Nunito, sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.profile-link:hover {
+    transform: translate(5px, -5px);
+    text-shadow: -5px 5px 0 #000;
+}
+/* ABOUT ME SECTION END */
+
+/* FOOTER SECTION START */
+footer {
+    width: 80%;
+    height: 5em;
+    display: grid;
+    place-content: center;
+    background-color: #5554;
+    margin: 4em auto 1em auto;
+    border-radius: 1em;
+    text-align: center;
+    overflow: hidden;
+}
+
+footer div {
+    font: 900 2rem Nunito, sans-serif;
+    text-shadow: 1px 1px 0 #000;
+}
+/* FOOTER SECTION END */
+
+/* MEDIA QUERIES SECTION FOR 815PX START */
+@media (max-width: 850px) {
+    .nav-list li {
+        height: 3em;
+    }
+
+    .nav-list a {
+        padding: 0.7em;
+    }
+
+    .welcome-section h1 {
+        font: 1000 7rem Montserrat, sans-serif;
+    }
+
+    .welcome-section p {
+        font: 900 4rem Rubik, sans-serif;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-header {
+        font: 900 3rem Montserrat, sans-serif;
+    }
+
+    .project-img {
+        height: 270px;
+    }
+
+    .project-title {
+        font: 800 2rem Montserrat, sans-serif;
+    }
+
+    .contact-section {
+        width: 90%;
+    }
+
+    .contact-links {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4rem;
+    }
+
+    .profile-link {
+        padding: 2.7rem;
+    }
+}
+
+/* MEDIA QUERIES SECTION FOR 815PX END */
+
+/* MEDIA QUERIES SECTION FOR 450PX START */
+@media (max-width: 450px) {
+    .nav-list li {
+        height: 4em;
+    }
+
+    .nav-list a {
+        padding: 2.5rem;
+    }
+
+    .welcome-section h1 {
+        font: 1000 3.5rem Montserrat, sans-serif;
+    }
+
+    .welcome-section p {
+        font: 900 3rem Rubik, sans-serif;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .projects-header {
+        font: 900 2rem Montserrat, sans-serif;
+    }
+
+    .project-img {
+        height: 260px;
+    }
+
+    .project-title {
+        font-size: 1.8rem;
+    }
+
+    .line {
+        width: 95%;
+    }
+
+    .contact-section h2 {
+        font-size: 3.1rem;
+    }
+
+    .contact-section p {
+        font-size: 2.8rem;
+        margin: 1rem auto;
+    }
+
+    .contact-links {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+    }
+
+    .profile-link {
+        font-size: 5rem;
+        text-align: left;
+    }
+
+    .icon-name {
+        font-size: 3rem;
+        margin: 1rem;
+    }
+}
+/* MEDIA QUERIES SECTION FOR 450PX END */
